@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--bezierPathViewController-->
+        <scene sceneID="bXF-Ys-1c6">
+            <objects>
+                <viewController storyboardIdentifier="bezierPathViewController" title="bezierPathViewController" id="AjV-gc-kpG" customClass="bezierPathViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="huY-JG-TUh"/>
+                        <viewControllerLayoutGuide type="bottom" id="bVm-Ce-t6p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fl0-ce-wCi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ovK-qd-wWy">
+                                <rect key="frame" x="0.0" y="41" width="375" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Wms-8x-Ws4"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="kCGLineCapButt"/>
+                                    <segment title="kCGLineCapRound"/>
+                                    <segment title="kCGLineCapSquare"/>
+                                </segments>
+                                <connections>
+                                    <action selector="lineCapType:" destination="AjV-gc-kpG" eventType="valueChanged" id="Qgb-0d-kae"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="端点类型CGLineCap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihE-pS-xZt">
+                                <rect key="frame" x="109.5" y="10" width="156.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="线条连接类型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="git-dS-Hdh">
+                                <rect key="frame" x="0.0" y="79" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C2n-tp-duJ">
+                                <rect key="frame" x="0.0" y="110" width="375" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ghx-7n-AVa"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="kCGLineJoinMiter"/>
+                                    <segment title="kCGLineJoinRound"/>
+                                    <segment title="kCGLineJoinBevel"/>
+                                </segments>
+                                <connections>
+                                    <action selector="lineJoinStyleType:" destination="AjV-gc-kpG" eventType="valueChanged" id="UT7-dE-beT"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bZ-Gf-0I0">
+                                <rect key="frame" x="20" y="148" width="62" height="30"/>
+                                <state key="normal" title="开始绘制"/>
+                                <connections>
+                                    <action selector="start:" destination="AjV-gc-kpG" eventType="touchUpInside" id="pn9-ea-Pjq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUI-FT-5qb">
+                                <rect key="frame" x="293" y="148" width="62" height="30"/>
+                                <state key="normal" title="清空画布"/>
+                                <connections>
+                                    <action selector="clear:" destination="AjV-gc-kpG" eventType="touchUpInside" id="jDq-lP-K8z"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBH-Es-F02" customClass="bezierPathView">
+                                <rect key="frame" x="0.0" y="198" width="375" height="469"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ovK-qd-wWy" firstAttribute="top" secondItem="ihE-pS-xZt" secondAttribute="bottom" constant="10" id="9Tx-tz-yTg"/>
+                            <constraint firstAttribute="trailing" secondItem="C2n-tp-duJ" secondAttribute="trailing" id="Buk-t6-MPb"/>
+                            <constraint firstItem="ovK-qd-wWy" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" id="FAq-Ei-cLl"/>
+                            <constraint firstItem="C2n-tp-duJ" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" id="IP5-ch-5n0"/>
+                            <constraint firstItem="bVm-Ce-t6p" firstAttribute="top" secondItem="QBH-Es-F02" secondAttribute="bottom" id="Ln0-xL-eNe"/>
+                            <constraint firstAttribute="trailing" secondItem="zUI-FT-5qb" secondAttribute="trailing" constant="20" id="N3L-Og-eJ1"/>
+                            <constraint firstAttribute="trailing" secondItem="git-dS-Hdh" secondAttribute="trailing" id="XsO-1H-ww9"/>
+                            <constraint firstItem="C2n-tp-duJ" firstAttribute="top" secondItem="git-dS-Hdh" secondAttribute="bottom" constant="10" id="cLU-FJ-ZMZ"/>
+                            <constraint firstItem="zUI-FT-5qb" firstAttribute="top" secondItem="C2n-tp-duJ" secondAttribute="bottom" constant="10" id="cnv-ak-kZF"/>
+                            <constraint firstAttribute="trailing" secondItem="ovK-qd-wWy" secondAttribute="trailing" id="eFO-nv-X99"/>
+                            <constraint firstItem="QBH-Es-F02" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" id="g6R-oy-3Bi"/>
+                            <constraint firstItem="git-dS-Hdh" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" id="lB8-uk-ZiA"/>
+                            <constraint firstItem="QBH-Es-F02" firstAttribute="top" secondItem="zUI-FT-5qb" secondAttribute="bottom" constant="20" id="n4z-1j-V5K"/>
+                            <constraint firstItem="git-dS-Hdh" firstAttribute="top" secondItem="ovK-qd-wWy" secondAttribute="bottom" constant="10" id="qMT-tz-s9Y"/>
+                            <constraint firstAttribute="trailing" secondItem="QBH-Es-F02" secondAttribute="trailing" id="sxo-RD-rI9"/>
+                            <constraint firstItem="ihE-pS-xZt" firstAttribute="top" secondItem="fl0-ce-wCi" secondAttribute="top" constant="10" id="uMK-F9-2mE"/>
+                            <constraint firstItem="5bZ-Gf-0I0" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" constant="20" id="w3s-nw-mM0"/>
+                            <constraint firstItem="5bZ-Gf-0I0" firstAttribute="top" secondItem="C2n-tp-duJ" secondAttribute="bottom" constant="10" id="wUq-zN-NL9"/>
+                            <constraint firstItem="ihE-pS-xZt" firstAttribute="centerX" secondItem="fl0-ce-wCi" secondAttribute="centerX" id="zkP-m4-Rfx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canveView" destination="QBH-Es-F02" id="jzq-AQ-Jpk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ceF-2G-MY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1298.4000000000001" y="95.802098950524751"/>
+        </scene>
+        <!--bezierPathWithRectViewController-->
+        <scene sceneID="fdV-pq-Y8g">
+            <objects>
+                <viewController storyboardIdentifier="bezierPathWithRectViewController" title="bezierPathWithRectViewController" id="22g-m1-W3w" customClass="bezierPathWithRectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wJ5-47-nq3"/>
+                        <viewControllerLayoutGuide type="bottom" id="KeS-dC-fPl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sEn-Ld-dW5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4d-2S-COj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-604" y="96"/>
+        </scene>
+        <!--bezierPathWithOvalInRectViewController-->
+        <scene sceneID="v75-30-wUZ">
+            <objects>
+                <viewController storyboardIdentifier="bezierPathWithOvalInRectViewController" title="bezierPathWithOvalInRectViewController" id="eyn-kK-Hq8" customClass="bezierPathWithOvalInRectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0eu-lh-8TA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ETN-al-163"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="leC-er-nE9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iV9-Tc-ouR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="-80"/>
+        </scene>
+        <!--bezierPathWithRoundedRectViewController-->
+        <scene sceneID="l2D-1J-heH">
+            <objects>
+                <viewController title="bezierPathWithRoundedRectViewController" id="4jr-Ag-pRI" customClass="bezierPathWithRoundedRectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZH2-66-9Fj"/>
+                        <viewControllerLayoutGuide type="bottom" id="pED-IL-atc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AiM-Ta-TkU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOk-zc-oQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="-116"/>
+        </scene>
+        <!--Bezier Path With Arc Center View Controller-->
+        <scene sceneID="R6i-Av-5Vd">
+            <objects>
+                <viewController storyboardIdentifier="bezierPathWithArcCenterViewController" id="D1W-sr-TZ2" customClass="bezierPathWithArcCenterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RQt-SH-6k3"/>
+                        <viewControllerLayoutGuide type="bottom" id="tXL-Xz-QmQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U7a-D1-uSF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAL-8v-Wnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="-116"/>
+        </scene>
+        <!--bezierPathWithCGPathViewController-->
+        <scene sceneID="uda-1X-eDr">
+            <objects>
+                <viewController storyboardIdentifier="bezierPathWithRoundedRectViewController" title="bezierPathWithCGPathViewController" id="XDJ-nI-0n5" customClass="bezierPathWithCGPathViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Juh-Wr-tRI"/>
+                        <viewControllerLayoutGuide type="bottom" id="sdu-K2-3pn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SUz-Sc-4T1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZa-As-1ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="-116"/>
+        </scene>
+    </scenes>
+</document>
