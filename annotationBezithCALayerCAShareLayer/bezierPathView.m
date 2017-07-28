@@ -9,7 +9,10 @@
 #import "bezierPathView.h"
 
 @implementation bezierPathView
+{
 
+    NSInteger count;
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -22,7 +25,7 @@
     [self.bezierPath addCurveToPoint:CGPointMake(200, 300) controlPoint1:CGPointMake(250, 250) controlPoint2:CGPointMake(280, 270)];
    
     [[UIColor redColor]set];
-        [self.bezierPath stroke];
+    [self.bezierPath stroke];
 //    [self.bezierPath fill];
     CALayer *layer = [CALayer layer];
     layer.backgroundColor = [UIColor blueColor].CGColor;
@@ -34,7 +37,7 @@
     
     CAKeyframeAnimation *keyframe = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     keyframe.path = self.bezierPath.CGPath;
-    keyframe.repeatCount = 1;
+    keyframe.repeatCount = HUGE;
     keyframe.duration = 10;
     
     [layer addAnimation:keyframe forKey:@"keyframe"];

@@ -30,6 +30,7 @@
 		0D3DE95A1F2ACB300030D49A /* CASpringAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3DE9591F2ACB300030D49A /* CASpringAnimationViewController.m */; };
 		0D3DE95D1F2ACB450030D49A /* CATransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3DE95C1F2ACB450030D49A /* CATransactionViewController.m */; };
 		0D3DE9601F2ADE140030D49A /* bezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3DE95F1F2ADE140030D49A /* bezierPathView.m */; };
+		0D3DE9631F2B3C5D0030D49A /* bezierPathWithRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3DE9621F2B3C5D0030D49A /* bezierPathWithRectView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		0D3DE95C1F2ACB450030D49A /* CATransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransactionViewController.m; sourceTree = "<group>"; };
 		0D3DE95E1F2ADE140030D49A /* bezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bezierPathView.h; sourceTree = "<group>"; };
 		0D3DE95F1F2ADE140030D49A /* bezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bezierPathView.m; sourceTree = "<group>"; };
+		0D3DE9611F2B3C5D0030D49A /* bezierPathWithRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bezierPathWithRectView.h; sourceTree = "<group>"; };
+		0D3DE9621F2B3C5D0030D49A /* bezierPathWithRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bezierPathWithRectView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 				0D3DE9461F2ACA4E0030D49A /* bezierPathWithCGPathViewController.m */,
 				0D3DE95E1F2ADE140030D49A /* bezierPathView.h */,
 				0D3DE95F1F2ADE140030D49A /* bezierPathView.m */,
+				0D3DE9611F2B3C5D0030D49A /* bezierPathWithRectView.h */,
+				0D3DE9621F2B3C5D0030D49A /* bezierPathWithRectView.m */,
 			);
 			name = UIBezierPath;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				0D3DE95A1F2ACB300030D49A /* CASpringAnimationViewController.m in Sources */,
 				0D3DE94F1F2ACAAB0030D49A /* CAShapeLayerViewController.m in Sources */,
 				0D3DE93E1F2AC9E50030D49A /* bezierPathWithOvalInRectViewController.m in Sources */,
+				0D3DE9631F2B3C5D0030D49A /* bezierPathWithRectView.m in Sources */,
 				0D3DE9351F2AC90F0030D49A /* bezierPathViewController.m in Sources */,
 				0D3DE9411F2ACA150030D49A /* bezierPathWithRoundedRectViewController.m in Sources */,
 				0D3DE9471F2ACA4E0030D49A /* bezierPathWithCGPathViewController.m in Sources */,
@@ -540,6 +546,7 @@
 				0D3DE9261F2ABF3D0030D49A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D3DE9271F2ABF3D0030D49A /* Build configuration list for PBXNativeTarget "annotationBezithCALayerCAShareLayerTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +555,7 @@
 				0D3DE9291F2ABF3D0030D49A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

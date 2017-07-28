@@ -43,7 +43,6 @@
         _bezierPath.lineWidth = 10;
         _bezierPath.miterLimit = 15;
         
-        
     }
     return _bezierPath;
 }
@@ -64,8 +63,6 @@
 
 - (IBAction)start:(id)sender {
     
-    self.canveView.bezierPath = self.bezierPath;
-    [self.canveView drawRect:self.canveView.frame];
 
 }
 

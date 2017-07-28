@@ -21,86 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ovK-qd-wWy">
-                                <rect key="frame" x="0.0" y="41" width="375" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="Wms-8x-Ws4"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="kCGLineCapButt"/>
-                                    <segment title="kCGLineCapRound"/>
-                                    <segment title="kCGLineCapSquare"/>
-                                </segments>
-                                <connections>
-                                    <action selector="lineCapType:" destination="AjV-gc-kpG" eventType="valueChanged" id="Qgb-0d-kae"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="端点类型CGLineCap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihE-pS-xZt">
-                                <rect key="frame" x="109.5" y="10" width="156.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="线条连接类型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="git-dS-Hdh">
-                                <rect key="frame" x="0.0" y="79" width="375" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C2n-tp-duJ">
-                                <rect key="frame" x="0.0" y="110" width="375" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="ghx-7n-AVa"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="kCGLineJoinMiter"/>
-                                    <segment title="kCGLineJoinRound"/>
-                                    <segment title="kCGLineJoinBevel"/>
-                                </segments>
-                                <connections>
-                                    <action selector="lineJoinStyleType:" destination="AjV-gc-kpG" eventType="valueChanged" id="UT7-dE-beT"/>
-                                </connections>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bZ-Gf-0I0">
-                                <rect key="frame" x="20" y="148" width="62" height="30"/>
-                                <state key="normal" title="开始绘制"/>
-                                <connections>
-                                    <action selector="start:" destination="AjV-gc-kpG" eventType="touchUpInside" id="pn9-ea-Pjq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUI-FT-5qb">
-                                <rect key="frame" x="293" y="148" width="62" height="30"/>
-                                <state key="normal" title="清空画布"/>
-                                <connections>
-                                    <action selector="clear:" destination="AjV-gc-kpG" eventType="touchUpInside" id="jDq-lP-K8z"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBH-Es-F02" customClass="bezierPathView">
-                                <rect key="frame" x="0.0" y="198" width="375" height="469"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ovK-qd-wWy" firstAttribute="top" secondItem="ihE-pS-xZt" secondAttribute="bottom" constant="10" id="9Tx-tz-yTg"/>
-                            <constraint firstAttribute="trailing" secondItem="C2n-tp-duJ" secondAttribute="trailing" id="Buk-t6-MPb"/>
-                            <constraint firstItem="ovK-qd-wWy" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" id="FAq-Ei-cLl"/>
-                            <constraint firstItem="C2n-tp-duJ" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" id="IP5-ch-5n0"/>
                             <constraint firstItem="bVm-Ce-t6p" firstAttribute="top" secondItem="QBH-Es-F02" secondAttribute="bottom" id="Ln0-xL-eNe"/>
-                            <constraint firstAttribute="trailing" secondItem="zUI-FT-5qb" secondAttribute="trailing" constant="20" id="N3L-Og-eJ1"/>
-                            <constraint firstAttribute="trailing" secondItem="git-dS-Hdh" secondAttribute="trailing" id="XsO-1H-ww9"/>
-                            <constraint firstItem="C2n-tp-duJ" firstAttribute="top" secondItem="git-dS-Hdh" secondAttribute="bottom" constant="10" id="cLU-FJ-ZMZ"/>
-                            <constraint firstItem="zUI-FT-5qb" firstAttribute="top" secondItem="C2n-tp-duJ" secondAttribute="bottom" constant="10" id="cnv-ak-kZF"/>
-                            <constraint firstAttribute="trailing" secondItem="ovK-qd-wWy" secondAttribute="trailing" id="eFO-nv-X99"/>
                             <constraint firstItem="QBH-Es-F02" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" id="g6R-oy-3Bi"/>
-                            <constraint firstItem="git-dS-Hdh" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" id="lB8-uk-ZiA"/>
-                            <constraint firstItem="QBH-Es-F02" firstAttribute="top" secondItem="zUI-FT-5qb" secondAttribute="bottom" constant="20" id="n4z-1j-V5K"/>
-                            <constraint firstItem="git-dS-Hdh" firstAttribute="top" secondItem="ovK-qd-wWy" secondAttribute="bottom" constant="10" id="qMT-tz-s9Y"/>
+                            <constraint firstItem="QBH-Es-F02" firstAttribute="top" secondItem="huY-JG-TUh" secondAttribute="bottom" id="hgS-ay-YIk"/>
                             <constraint firstAttribute="trailing" secondItem="QBH-Es-F02" secondAttribute="trailing" id="sxo-RD-rI9"/>
-                            <constraint firstItem="ihE-pS-xZt" firstAttribute="top" secondItem="fl0-ce-wCi" secondAttribute="top" constant="10" id="uMK-F9-2mE"/>
-                            <constraint firstItem="5bZ-Gf-0I0" firstAttribute="leading" secondItem="fl0-ce-wCi" secondAttribute="leading" constant="20" id="w3s-nw-mM0"/>
-                            <constraint firstItem="5bZ-Gf-0I0" firstAttribute="top" secondItem="C2n-tp-duJ" secondAttribute="bottom" constant="10" id="wUq-zN-NL9"/>
-                            <constraint firstItem="ihE-pS-xZt" firstAttribute="centerX" secondItem="fl0-ce-wCi" secondAttribute="centerX" id="zkP-m4-Rfx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -122,12 +53,27 @@
                     <view key="view" contentMode="scaleToFill" id="sEn-Ld-dW5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmT-RO-jnZ" customClass="bezierPathWithRectView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KeS-dC-fPl" firstAttribute="top" secondItem="vmT-RO-jnZ" secondAttribute="bottom" id="B48-JP-lpi"/>
+                            <constraint firstAttribute="trailing" secondItem="vmT-RO-jnZ" secondAttribute="trailing" id="RVP-wG-2q2"/>
+                            <constraint firstItem="vmT-RO-jnZ" firstAttribute="leading" secondItem="sEn-Ld-dW5" secondAttribute="leading" id="YjF-oP-j7B"/>
+                            <constraint firstItem="vmT-RO-jnZ" firstAttribute="top" secondItem="wJ5-47-nq3" secondAttribute="bottom" id="m4I-d5-4bl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="canceView" destination="vmT-RO-jnZ" id="JQ8-ii-qAH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4d-2S-COj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-604" y="96"/>
+            <point key="canvasLocation" x="-582" y="96"/>
         </scene>
         <!--bezierPathWithOvalInRectViewController-->
         <scene sceneID="v75-30-wUZ">
