@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -86,7 +86,19 @@
                     <view key="view" contentMode="scaleToFill" id="leC-er-nE9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTc-Hi-dqw" customClass="bezierPathWithOvalInRectView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PTc-Hi-dqw" firstAttribute="top" secondItem="0eu-lh-8TA" secondAttribute="bottom" id="GJ7-27-69S"/>
+                            <constraint firstItem="PTc-Hi-dqw" firstAttribute="leading" secondItem="leC-er-nE9" secondAttribute="leading" id="H6q-MV-ZJ3"/>
+                            <constraint firstItem="ETN-al-163" firstAttribute="top" secondItem="PTc-Hi-dqw" secondAttribute="bottom" id="YvF-J7-nRn"/>
+                            <constraint firstAttribute="trailing" secondItem="PTc-Hi-dqw" secondAttribute="trailing" id="m0a-NN-anm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iV9-Tc-ouR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,7 +108,7 @@
         <!--bezierPathWithRoundedRectViewController-->
         <scene sceneID="l2D-1J-heH">
             <objects>
-                <viewController title="bezierPathWithRoundedRectViewController" id="4jr-Ag-pRI" customClass="bezierPathWithRoundedRectViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bezierPathWithRoundedRectViewController" title="bezierPathWithRoundedRectViewController" id="4jr-Ag-pRI" customClass="bezierPathWithRoundedRectViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZH2-66-9Fj"/>
                         <viewControllerLayoutGuide type="bottom" id="pED-IL-atc"/>
@@ -104,7 +116,19 @@
                     <view key="view" contentMode="scaleToFill" id="AiM-Ta-TkU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9i-rb-Qml" customClass="bezierPathWithRoundedRectView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f9i-rb-Qml" firstAttribute="top" secondItem="ZH2-66-9Fj" secondAttribute="bottom" id="A0f-vf-tFn"/>
+                            <constraint firstItem="pED-IL-atc" firstAttribute="top" secondItem="f9i-rb-Qml" secondAttribute="bottom" id="ETz-jm-eCM"/>
+                            <constraint firstItem="f9i-rb-Qml" firstAttribute="leading" secondItem="AiM-Ta-TkU" secondAttribute="leading" id="PPH-6X-GKC"/>
+                            <constraint firstAttribute="trailing" secondItem="f9i-rb-Qml" secondAttribute="trailing" id="Q6G-0g-LoA"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOk-zc-oQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -122,7 +146,19 @@
                     <view key="view" contentMode="scaleToFill" id="U7a-D1-uSF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Alc-XM-DYb" customClass="bezierPathWithArcCenteView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Alc-XM-DYb" secondAttribute="trailing" id="3EQ-vC-6TL"/>
+                            <constraint firstItem="Alc-XM-DYb" firstAttribute="leading" secondItem="U7a-D1-uSF" secondAttribute="leading" id="JiQ-V4-ily"/>
+                            <constraint firstItem="tXL-Xz-QmQ" firstAttribute="top" secondItem="Alc-XM-DYb" secondAttribute="bottom" id="Unq-mG-Tjf"/>
+                            <constraint firstItem="Alc-XM-DYb" firstAttribute="top" secondItem="RQt-SH-6k3" secondAttribute="bottom" id="dEr-sb-rnb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAL-8v-Wnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,7 +168,7 @@
         <!--bezierPathWithCGPathViewController-->
         <scene sceneID="uda-1X-eDr">
             <objects>
-                <viewController storyboardIdentifier="bezierPathWithRoundedRectViewController" title="bezierPathWithCGPathViewController" id="XDJ-nI-0n5" customClass="bezierPathWithCGPathViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bezierPathWithCGPathViewController" title="bezierPathWithCGPathViewController" id="XDJ-nI-0n5" customClass="bezierPathWithCGPathViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Juh-Wr-tRI"/>
                         <viewControllerLayoutGuide type="bottom" id="sdu-K2-3pn"/>
@@ -140,7 +176,19 @@
                     <view key="view" contentMode="scaleToFill" id="SUz-Sc-4T1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="to5-Kb-z8l" customClass="bezierPathWithCGPathView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sdu-K2-3pn" firstAttribute="top" secondItem="to5-Kb-z8l" secondAttribute="bottom" id="6hB-zT-sa2"/>
+                            <constraint firstItem="to5-Kb-z8l" firstAttribute="top" secondItem="Juh-Wr-tRI" secondAttribute="bottom" id="8Aj-K1-joD"/>
+                            <constraint firstAttribute="trailing" secondItem="to5-Kb-z8l" secondAttribute="trailing" id="Asx-qy-WH5"/>
+                            <constraint firstItem="to5-Kb-z8l" firstAttribute="leading" secondItem="SUz-Sc-4T1" secondAttribute="leading" id="CEt-5c-B93"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZa-As-1ne" userLabel="First Responder" sceneMemberID="firstResponder"/>

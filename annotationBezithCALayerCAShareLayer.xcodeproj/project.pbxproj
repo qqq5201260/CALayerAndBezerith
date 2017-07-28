@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045770D81F2B63AD00E53974 /* bezierPathWithOvalInRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045770D71F2B63AD00E53974 /* bezierPathWithOvalInRectView.m */; };
+		04E0036F1F2B66F300C02F2F /* bezierPathWithRoundedRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E0036E1F2B66F300C02F2F /* bezierPathWithRoundedRectView.m */; };
+		04E003721F2B691100C02F2F /* bezierPathWithArcCenteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E003711F2B691100C02F2F /* bezierPathWithArcCenteView.m */; };
+		04E003751F2B6A3300C02F2F /* bezierPathWithCGPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E003741F2B6A3300C02F2F /* bezierPathWithCGPathView.m */; };
 		0D3DE9071F2ABF3D0030D49A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3DE9061F2ABF3D0030D49A /* main.m */; };
 		0D3DE90A1F2ABF3D0030D49A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3DE9091F2ABF3D0030D49A /* AppDelegate.m */; };
 		0D3DE9101F2ABF3D0030D49A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D3DE90E1F2ABF3D0030D49A /* Main.storyboard */; };
@@ -44,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045770D61F2B63AD00E53974 /* bezierPathWithOvalInRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bezierPathWithOvalInRectView.h; sourceTree = "<group>"; };
+		045770D71F2B63AD00E53974 /* bezierPathWithOvalInRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bezierPathWithOvalInRectView.m; sourceTree = "<group>"; };
+		04E0036D1F2B66F300C02F2F /* bezierPathWithRoundedRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bezierPathWithRoundedRectView.h; sourceTree = "<group>"; };
+		04E0036E1F2B66F300C02F2F /* bezierPathWithRoundedRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bezierPathWithRoundedRectView.m; sourceTree = "<group>"; };
+		04E003701F2B691100C02F2F /* bezierPathWithArcCenteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bezierPathWithArcCenteView.h; sourceTree = "<group>"; };
+		04E003711F2B691100C02F2F /* bezierPathWithArcCenteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bezierPathWithArcCenteView.m; sourceTree = "<group>"; };
+		04E003731F2B6A3300C02F2F /* bezierPathWithCGPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bezierPathWithCGPathView.h; sourceTree = "<group>"; };
+		04E003741F2B6A3300C02F2F /* bezierPathWithCGPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bezierPathWithCGPathView.m; sourceTree = "<group>"; };
 		0D3DE9021F2ABF3D0030D49A /* annotationBezithCALayerCAShareLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = annotationBezithCALayerCAShareLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3DE9061F2ABF3D0030D49A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0D3DE9081F2ABF3D0030D49A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +202,14 @@
 				0D3DE95F1F2ADE140030D49A /* bezierPathView.m */,
 				0D3DE9611F2B3C5D0030D49A /* bezierPathWithRectView.h */,
 				0D3DE9621F2B3C5D0030D49A /* bezierPathWithRectView.m */,
+				045770D61F2B63AD00E53974 /* bezierPathWithOvalInRectView.h */,
+				045770D71F2B63AD00E53974 /* bezierPathWithOvalInRectView.m */,
+				04E0036D1F2B66F300C02F2F /* bezierPathWithRoundedRectView.h */,
+				04E0036E1F2B66F300C02F2F /* bezierPathWithRoundedRectView.m */,
+				04E003701F2B691100C02F2F /* bezierPathWithArcCenteView.h */,
+				04E003711F2B691100C02F2F /* bezierPathWithArcCenteView.m */,
+				04E003731F2B6A3300C02F2F /* bezierPathWithCGPathView.h */,
+				04E003741F2B6A3300C02F2F /* bezierPathWithCGPathView.m */,
 			);
 			name = UIBezierPath;
 			sourceTree = "<group>";
@@ -333,8 +353,12 @@
 				0D3DE90A1F2ABF3D0030D49A /* AppDelegate.m in Sources */,
 				0D3DE9441F2ACA370030D49A /* bezierPathWithArcCenterViewController.m in Sources */,
 				0D3DE9071F2ABF3D0030D49A /* main.m in Sources */,
+				04E003751F2B6A3300C02F2F /* bezierPathWithCGPathView.m in Sources */,
 				0D3DE9601F2ADE140030D49A /* bezierPathView.m in Sources */,
+				04E003721F2B691100C02F2F /* bezierPathWithArcCenteView.m in Sources */,
+				045770D81F2B63AD00E53974 /* bezierPathWithOvalInRectView.m in Sources */,
 				0D3DE9541F2ACAF40030D49A /* CABasicAnimationViewController.m in Sources */,
+				04E0036F1F2B66F300C02F2F /* bezierPathWithRoundedRectView.m in Sources */,
 				0D3DE9571F2ACB140030D49A /* CAKeyframeAnimationViewController.m in Sources */,
 				0D3DE95A1F2ACB300030D49A /* CASpringAnimationViewController.m in Sources */,
 				0D3DE94F1F2ACAAB0030D49A /* CAShapeLayerViewController.m in Sources */,
@@ -483,6 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3LET74VX6;
 				INFOPLIST_FILE = annotationBezithCALayerCAShareLayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.million.annotationBezithCALayerCAShareLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -495,6 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3LET74VX6;
 				INFOPLIST_FILE = annotationBezithCALayerCAShareLayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.million.annotationBezithCALayerCAShareLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
