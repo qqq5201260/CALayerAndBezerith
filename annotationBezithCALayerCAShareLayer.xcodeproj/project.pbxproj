@@ -35,6 +35,11 @@
 		0D3DE95D1F2ACB450030D49A /* CATransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3DE95C1F2ACB450030D49A /* CATransactionViewController.m */; };
 		0D3DE9601F2ADE140030D49A /* bezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3DE95F1F2ADE140030D49A /* bezierPathView.m */; };
 		0D3DE9631F2B3C5D0030D49A /* bezierPathWithRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3DE9621F2B3C5D0030D49A /* bezierPathWithRectView.m */; };
+		0D56A0391F2C3C2A00B60B5F /* UIView+animLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56A0381F2C3C2A00B60B5F /* UIView+animLayer.m */; };
+		0D56A03C1F2C3D6A00B60B5F /* CACustomerLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56A03B1F2C3D6A00B60B5F /* CACustomerLayerViewController.m */; };
+		0D56A03F1F2C54B000B60B5F /* CAGradientLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56A03E1F2C54B000B60B5F /* CAGradientLayerViewController.m */; };
+		0D56A0421F2C5D6F00B60B5F /* CZLTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56A0411F2C5D6F00B60B5F /* CZLTimer.m */; };
+		0D56A0451F2C64A600B60B5F /* CAEmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56A0441F2C64A600B60B5F /* CAEmitterLayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +105,16 @@
 		0D3DE95F1F2ADE140030D49A /* bezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bezierPathView.m; sourceTree = "<group>"; };
 		0D3DE9611F2B3C5D0030D49A /* bezierPathWithRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bezierPathWithRectView.h; sourceTree = "<group>"; };
 		0D3DE9621F2B3C5D0030D49A /* bezierPathWithRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bezierPathWithRectView.m; sourceTree = "<group>"; };
+		0D56A0371F2C3C2A00B60B5F /* UIView+animLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+animLayer.h"; sourceTree = "<group>"; };
+		0D56A0381F2C3C2A00B60B5F /* UIView+animLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+animLayer.m"; sourceTree = "<group>"; };
+		0D56A03A1F2C3D6A00B60B5F /* CACustomerLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CACustomerLayerViewController.h; sourceTree = "<group>"; };
+		0D56A03B1F2C3D6A00B60B5F /* CACustomerLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CACustomerLayerViewController.m; sourceTree = "<group>"; };
+		0D56A03D1F2C54B000B60B5F /* CAGradientLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientLayerViewController.h; sourceTree = "<group>"; };
+		0D56A03E1F2C54B000B60B5F /* CAGradientLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientLayerViewController.m; sourceTree = "<group>"; };
+		0D56A0401F2C5D6F00B60B5F /* CZLTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZLTimer.h; sourceTree = "<group>"; };
+		0D56A0411F2C5D6F00B60B5F /* CZLTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLTimer.m; sourceTree = "<group>"; };
+		0D56A0431F2C64A600B60B5F /* CAEmitterLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEmitterLayerViewController.h; sourceTree = "<group>"; };
+		0D56A0441F2C64A600B60B5F /* CAEmitterLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +167,8 @@
 				0D3DE9131F2ABF3D0030D49A /* LaunchScreen.storyboard */,
 				0D3DE9161F2ABF3D0030D49A /* Info.plist */,
 				0D3DE9051F2ABF3D0030D49A /* Supporting Files */,
+				0D56A0401F2C5D6F00B60B5F /* CZLTimer.h */,
+				0D56A0411F2C5D6F00B60B5F /* CZLTimer.m */,
 			);
 			path = annotationBezithCALayerCAShareLayer;
 			sourceTree = "<group>";
@@ -217,11 +234,19 @@
 		0D3DE9301F2AC22F0030D49A /* CAlayer */ = {
 			isa = PBXGroup;
 			children = (
-				0D3DE9481F2ACA790030D49A /* CALayerViewController.h */,
 				0D3DE94D1F2ACAAB0030D49A /* CAShapeLayerViewController.h */,
 				0D3DE94E1F2ACAAB0030D49A /* CAShapeLayerViewController.m */,
+				0D3DE9481F2ACA790030D49A /* CALayerViewController.h */,
 				0D3DE9491F2ACA790030D49A /* CALayerViewController.m */,
 				0D3DE94B1F2ACA8C0030D49A /* layer.storyboard */,
+				0D56A0371F2C3C2A00B60B5F /* UIView+animLayer.h */,
+				0D56A0381F2C3C2A00B60B5F /* UIView+animLayer.m */,
+				0D56A03A1F2C3D6A00B60B5F /* CACustomerLayerViewController.h */,
+				0D56A03B1F2C3D6A00B60B5F /* CACustomerLayerViewController.m */,
+				0D56A03D1F2C54B000B60B5F /* CAGradientLayerViewController.h */,
+				0D56A03E1F2C54B000B60B5F /* CAGradientLayerViewController.m */,
+				0D56A0431F2C64A600B60B5F /* CAEmitterLayerViewController.h */,
+				0D56A0441F2C64A600B60B5F /* CAEmitterLayerViewController.m */,
 			);
 			name = CAlayer;
 			sourceTree = "<group>";
@@ -350,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D3DE9391F2AC9270030D49A /* bezierPathWithRectViewController.m in Sources */,
+				0D56A03C1F2C3D6A00B60B5F /* CACustomerLayerViewController.m in Sources */,
 				0D3DE90A1F2ABF3D0030D49A /* AppDelegate.m in Sources */,
 				0D3DE9441F2ACA370030D49A /* bezierPathWithArcCenterViewController.m in Sources */,
 				0D3DE9071F2ABF3D0030D49A /* main.m in Sources */,
@@ -360,9 +386,12 @@
 				0D3DE9541F2ACAF40030D49A /* CABasicAnimationViewController.m in Sources */,
 				04E0036F1F2B66F300C02F2F /* bezierPathWithRoundedRectView.m in Sources */,
 				0D3DE9571F2ACB140030D49A /* CAKeyframeAnimationViewController.m in Sources */,
+				0D56A0391F2C3C2A00B60B5F /* UIView+animLayer.m in Sources */,
 				0D3DE95A1F2ACB300030D49A /* CASpringAnimationViewController.m in Sources */,
 				0D3DE94F1F2ACAAB0030D49A /* CAShapeLayerViewController.m in Sources */,
 				0D3DE93E1F2AC9E50030D49A /* bezierPathWithOvalInRectViewController.m in Sources */,
+				0D56A03F1F2C54B000B60B5F /* CAGradientLayerViewController.m in Sources */,
+				0D56A0451F2C64A600B60B5F /* CAEmitterLayerViewController.m in Sources */,
 				0D3DE9631F2B3C5D0030D49A /* bezierPathWithRectView.m in Sources */,
 				0D3DE9351F2AC90F0030D49A /* bezierPathViewController.m in Sources */,
 				0D3DE9411F2ACA150030D49A /* bezierPathWithRoundedRectViewController.m in Sources */,
@@ -370,6 +399,7 @@
 				0D3DE95D1F2ACB450030D49A /* CATransactionViewController.m in Sources */,
 				0D3DE94A1F2ACA790030D49A /* CALayerViewController.m in Sources */,
 				0D3DE92D1F2ABFA60030D49A /* MainTableViewController.m in Sources */,
+				0D56A0421F2C5D6F00B60B5F /* CZLTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

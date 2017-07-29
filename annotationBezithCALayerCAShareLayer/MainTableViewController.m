@@ -121,7 +121,7 @@
 
 - (NSArray *)dataArray{
    
-    return @[@{@"title":@"bezierPath",@"array":@[@"bezierPath",@"bezierPathWithRect",@"bezierPathWithOvalInRect",@"bezierPathWithRoundedRect",@"bezierPathWithArcCenter",@"bezierPathWithCGPath"]},@{@"title":@"layer",@"array":@[@"CALayer",@"CAShapeLayer",]},@{@"title":@"coreAnimation",@"array":@[@"CABasicAnimation",@"CAKeyframeAnimation",@"CASpringAnimation",@"CATransaction"]}];
+    return @[@{@"title":@"bezierPath",@"array":@[@"bezierPath",@"bezierPathWithRect",@"bezierPathWithOvalInRect",@"bezierPathWithRoundedRect",@"bezierPathWithArcCenter",@"bezierPathWithCGPath"]},@{@"title":@"layer",@"array":@[@"CALayer",@"CAShapeLayer",@"CACustomerLayer",@"CAGradientLayer",@"CAEmitterLayer"]},@{@"title":@"coreAnimation",@"array":@[@"CABasicAnimation",@"CAKeyframeAnimation",@"CASpringAnimation",@"CATransaction"]}];
 }
 
 @end

@@ -10,18 +10,38 @@
 
 @interface CASpringAnimationViewController ()
 
+
 @end
 
 @implementation CASpringAnimationViewController
+{
 
+     CALayer *_aniLayer;
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _aniLayer = [CALayer layer];
+    _aniLayer.bounds = CGRectMake(0, 0, 30, 30);
+    _aniLayer.position = self.view.center;
+    _aniLayer.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"yezhi"]].CGColor;
+    [self.view.layer addSublayer:_aniLayer];
+    
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)start:(id)sender {
+    
+    CASpringAnimation *basic = [CASpringAnimation animationWithKeyPath:@"position"];
+    basic.toValue = [NSValue valueWithCGPoint:CGPointMake(200, 100)];
+    basic.duration = 1;
+    basic.repeatCount = 1;
+    //    basic.autoreverses = YES;
+    [_aniLayer addAnimation:basic forKey:basic.keyPath];
 }
 
 /*
