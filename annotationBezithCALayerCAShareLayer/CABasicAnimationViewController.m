@@ -5,28 +5,45 @@
 //  Created by czl on 2017/7/28.
 //  Copyright © 2017年 chinapke. All rights reserved.
 //
-/*
- transform.scale = 比例转换
+
+ /*
+ opacity 透明度
+ backgroundColor 背景颜色
+ cornerRadius 圆角
+ borderWidth 边框宽度
+ contents 内容
+ shadowColor 阴影颜色
+ shadowOffset 阴影偏移量
+ shadowOpacity 阴影透明度
+ shadowRadius 阴影圆角
+ ...
+ rotation 旋转
+ transform.rotation.x
+ transform.rotation.y
+ transform.rotation.z
+ ...
+ scale 缩放
  transform.scale.x
  transform.scale.y
- transform.rotation.z
- opacity   透明度
- zPosition
- backgroundColor 背景颜色
- cornerRadius 拐角
- borderWidth  边框的宽度
+ transform.scale.z
+ ...
+ translation 平移
+ transform.translation.x
+ transform.translation.y
+ transform.translation.z
+ ...
+ position 位置
+ position.x
+ position.y
+ ...
  bounds
- contents     内容
- contentsRect
- frame
- hidden
- masksToBounds
- opacity
- position
- shadowColor
- shadowOffset
- shadowOpacity
- shadowRadius
+ bounds.size
+ bounds.size.width
+ bounds.size.height
+ bounds.origin
+ bounds.origin.x
+ bounds.origin.y
+ 
  
  作者：七月上
  链接：http://www.cocoachina.com/ios/20170623/19612.html

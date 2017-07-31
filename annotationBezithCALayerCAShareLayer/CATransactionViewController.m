@@ -22,7 +22,7 @@
     _aniLayer = [CALayer layer];
     _aniLayer.bounds = CGRectMake(0, 0, 100, 100);
     _aniLayer.position = self.view.center;
-    _aniLayer.backgroundColor = [UIColor redColor].CGColor;
+//    _aniLayer.backgroundColor = [UIColor redColor].CGColor;
     [self.view.layer addSublayer:_aniLayer];
     // Do any additional setup after loading the view.
 }
@@ -36,6 +36,8 @@
 
     CGPoint p = [[touches anyObject] locationInView:self.view];
     [self updateLayer:p];
+    [self transitionAnimation];
+    
     
 }
 
@@ -47,6 +49,38 @@
     basic.delegate = self;
     [basic setValue:[NSValue valueWithCGPoint:point] forKey:@"positionToEnd"];
     [_aniLayer addAnimation:basic forKey:basic.keyPath];
+    
+}
+
+- (void)transitionAnimation{
+
+    CATransition *transition = [CATransition animation];
+    /*
+     效果
+     http://www.cocoachina.com/ios/20170623/19612.html
+     系统 kCATransitionFade  ->fade
+         kCATransitionMoveIn ->movein
+         kCATransitionPush ->push
+         kCATransitionReveal ->reveal
+         cube   立方体旋转效果
+         oglFlip 翻转效果
+         pageCurl 向上翻页效果
+         pageUnCurl 向下翻页效果
+         suckEffect 收缩效果
+         rippleEffect 水滴波纹效果
+         cameralIrisHollowOpen 摄像头打开效果
+         cameralIrisHollowClose 摄像头关闭效果
+     
+     */
+    transition.type = @"cube";
+    transition.subtype = kCATransitionFromLeft;
+    transition.duration = 1.0;
+    
+    
+//    _aniLayer.backgroundColor = [UIColor colorWithWhite:arc4random_uniform(256)/256.0 alpha:1.0].CGColor;
+    _aniLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:[NSString stringWithFormat:@"%d",arc4random_uniform(4)+1]].CGImage);
+    
+    [_aniLayer addAnimation:transition forKey:transition.type];
 }
 
 - (void)animationDidStart:(CAAnimation *)anim{

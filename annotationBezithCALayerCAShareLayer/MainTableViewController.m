@@ -5,10 +5,49 @@
 //  Created by czl on 2017/7/28.
 //  Copyright © 2017年 chinapke. All rights reserved.
 //
-
+/*
+ opacity 透明度
+ backgroundColor 背景颜色
+ cornerRadius 圆角
+ borderWidth 边框宽度
+ contents 内容
+ shadowColor 阴影颜色
+ shadowOffset 阴影偏移量
+ shadowOpacity 阴影透明度
+ shadowRadius 阴影圆角
+ ...
+ rotation 旋转
+ transform.rotation.x
+ transform.rotation.y
+ transform.rotation.z
+ ...
+ scale 缩放
+ transform.scale.x
+ transform.scale.y
+ transform.scale.z
+ ...
+ translation 平移
+ transform.translation.x
+ transform.translation.y
+ transform.translation.z
+ ...
+ position 位置
+ position.x
+ position.y
+ ...
+ bounds
+ bounds.size
+ bounds.size.width
+ bounds.size.height
+ bounds.origin
+ bounds.origin.x
+ bounds.origin.y
+ */
 #import "MainTableViewController.h"
+#import "AnimatedTransitioningSubject.h"
 
-@interface MainTableViewController ()
+
+@interface MainTableViewController ()<UINavigationControllerDelegate>
 
 @property (nonatomic,strong)NSArray *dataArray;
 
@@ -73,6 +112,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSArray *array = self.dataArray[indexPath.section][@"array"];
     UIViewController *vc = [[UIStoryboard storyboardWithName:self.dataArray[indexPath.section][@"title"] bundle:nil] instantiateViewControllerWithIdentifier:[NSString stringWithFormat:@"%@ViewController",array[indexPath.row]]];
+    self.navigationController.delegate = self;
+    
     [self.navigationController pushViewController:vc animated:YES];
 }
 /*
@@ -118,6 +159,28 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                            animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                         fromViewController:(UIViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC{
+    return [AnimatedTransitioningSubject new];
+
+}
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+
+    return [AnimatedTransitioningSubject new];
+}
+
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+
+   return [AnimatedTransitioningSubject new];
+    
+}
 
 - (NSArray *)dataArray{
    

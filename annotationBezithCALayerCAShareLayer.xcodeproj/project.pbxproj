@@ -40,6 +40,8 @@
 		0D56A03F1F2C54B000B60B5F /* CAGradientLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56A03E1F2C54B000B60B5F /* CAGradientLayerViewController.m */; };
 		0D56A0421F2C5D6F00B60B5F /* CZLTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56A0411F2C5D6F00B60B5F /* CZLTimer.m */; };
 		0D56A0451F2C64A600B60B5F /* CAEmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56A0441F2C64A600B60B5F /* CAEmitterLayerViewController.m */; };
+		0D588D6E1F2EBB0F00639AD2 /* AnimatedTransitioningSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D588D6D1F2EBB0F00639AD2 /* AnimatedTransitioningSubject.m */; };
+		0DC1EB161F2EC15600D04185 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DC1EB151F2EC15600D04185 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +70,6 @@
 		0D3DE90F1F2ABF3D0030D49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D3DE9111F2ABF3D0030D49A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D3DE9141F2ABF3D0030D49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0D3DE9161F2ABF3D0030D49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D3DE91B1F2ABF3D0030D49A /* annotationBezithCALayerCAShareLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = annotationBezithCALayerCAShareLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3DE91F1F2ABF3D0030D49A /* annotationBezithCALayerCAShareLayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = annotationBezithCALayerCAShareLayerTests.m; sourceTree = "<group>"; };
 		0D3DE9211F2ABF3D0030D49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +116,9 @@
 		0D56A0411F2C5D6F00B60B5F /* CZLTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZLTimer.m; sourceTree = "<group>"; };
 		0D56A0431F2C64A600B60B5F /* CAEmitterLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEmitterLayerViewController.h; sourceTree = "<group>"; };
 		0D56A0441F2C64A600B60B5F /* CAEmitterLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerViewController.m; sourceTree = "<group>"; };
+		0D588D6C1F2EBB0F00639AD2 /* AnimatedTransitioningSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransitioningSubject.h; sourceTree = "<group>"; };
+		0D588D6D1F2EBB0F00639AD2 /* AnimatedTransitioningSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransitioningSubject.m; sourceTree = "<group>"; };
+		0DC1EB151F2EC15600D04185 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +169,7 @@
 				0D3DE90E1F2ABF3D0030D49A /* Main.storyboard */,
 				0D3DE9111F2ABF3D0030D49A /* Assets.xcassets */,
 				0D3DE9131F2ABF3D0030D49A /* LaunchScreen.storyboard */,
-				0D3DE9161F2ABF3D0030D49A /* Info.plist */,
+				0DC1EB151F2EC15600D04185 /* Info.plist */,
 				0D3DE9051F2ABF3D0030D49A /* Supporting Files */,
 				0D56A0401F2C5D6F00B60B5F /* CZLTimer.h */,
 				0D56A0411F2C5D6F00B60B5F /* CZLTimer.m */,
@@ -195,6 +199,8 @@
 			children = (
 				0D3DE92B1F2ABFA60030D49A /* MainTableViewController.h */,
 				0D3DE92C1F2ABFA60030D49A /* MainTableViewController.m */,
+				0D588D6C1F2EBB0F00639AD2 /* AnimatedTransitioningSubject.h */,
+				0D588D6D1F2EBB0F00639AD2 /* AnimatedTransitioningSubject.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 				0D3DE9121F2ABF3D0030D49A /* Assets.xcassets in Resources */,
 				0D3DE9511F2ACADD0030D49A /* coreAnimation.storyboard in Resources */,
 				0D3DE9101F2ABF3D0030D49A /* Main.storyboard in Resources */,
+				0DC1EB161F2EC15600D04185 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +403,7 @@
 				0D3DE9351F2AC90F0030D49A /* bezierPathViewController.m in Sources */,
 				0D3DE9411F2ACA150030D49A /* bezierPathWithRoundedRectViewController.m in Sources */,
 				0D3DE9471F2ACA4E0030D49A /* bezierPathWithCGPathViewController.m in Sources */,
+				0D588D6E1F2EBB0F00639AD2 /* AnimatedTransitioningSubject.m in Sources */,
 				0D3DE95D1F2ACB450030D49A /* CATransactionViewController.m in Sources */,
 				0D3DE94A1F2ACA790030D49A /* CALayerViewController.m in Sources */,
 				0D3DE92D1F2ABFA60030D49A /* MainTableViewController.m in Sources */,
@@ -536,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3LET74VX6;
-				INFOPLIST_FILE = annotationBezithCALayerCAShareLayer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/annotationBezithCALayerCAShareLayer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.million.annotationBezithCALayerCAShareLayer;
@@ -549,7 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3LET74VX6;
-				INFOPLIST_FILE = annotationBezithCALayerCAShareLayer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/annotationBezithCALayerCAShareLayer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.million.annotationBezithCALayerCAShareLayer;
